@@ -1,0 +1,30 @@
+{
+  "name": "graphmon",
+  "version": "0.0.1",
+  "description": "use mongoose an existing mongoose schema to create a graphql endpoint",
+  "repository": {
+    "url": "https://github.com/matthewkeil/graphmon.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "mocha": "node_modules/.bin/mocha --require ts-node/register --recursive src/**/*.spec.ts",
+    "mocha:once": "npm run mocha -- --reporter mochawesome --reporter-options reportDir=test/results/$(date +%F)/$(date +%T),reportFilename=index",
+    "mocha:watch": "npm run mocha -- --watch --reporter min",
+    "ts-node": "node_modules/.bin/ts-node --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/graphql": "^0.13.3",
+    "@types/mongoose": "^5.2.0",
+    "graphql": "^0.13.2",
+    "mongoose": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.4",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.0.2",
+    "ts-node": "^7.0.0"
+  }
+}
